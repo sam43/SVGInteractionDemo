@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2019.
+ * Bismillahir Rahmanir Rahim,
+ * Developer : Saadat Sayem
+ */
+
 package com.sam43.svginteractiondemo
 
 import android.content.Context
@@ -68,30 +74,7 @@ interface APIService {
 
 fun Context.toast(msg: String) = Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
 
-
-fun getHtmLString(svgString: String) = "<!DOCTYPE HTML>\n" +
-        "<html>\n" +
-        "<head>\n" +
-        "    <meta content=\"width=device-width, initial-scale=1, maximum-scale=10\" name=\"viewport\">\n" +
-        "    <style>\n" +
-        "      body {\n" +
-        "        text-align:center;\n" +
-        "      }\n" +
-        "\n" +
-        "\n" +
-        "    </style>\n" +
-        "</head>\n" +
-        "<body>\n" +
-        "    <h3 id=\"l_value\">WebView</h3>\n" +
-        "<div class=\"container\">\n" +
-        svgString +
-        "</div>\n" +
-        "<script src='index.js' type='text/javascript'></script>" +
-        "</body>\n" +
-        "</html>"
-
-
-fun getHTMLbody(svgString: String) = "<!DOCTYPE HTML>\n" +
+fun getHTMLBody(svgString: String) = "<!DOCTYPE HTML>\n" +
         "<html>\n" +
         "\n" +
         "<head>\n" +
