@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2019.
+ * Bismillahir Rahmanir Rahim,
+ * Developer : Saadat Sayem
+ */
+
 package com.sam43.svginteractiondemo
 
 import android.app.Application

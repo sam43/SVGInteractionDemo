@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SVG Interaction Demo</string>
+    <string name="rendering_svg">Rendering SVG</string>
 </resources>
