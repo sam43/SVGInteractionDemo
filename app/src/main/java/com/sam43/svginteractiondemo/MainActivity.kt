@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("AddJavascriptInterface", "SetJavaScriptEnabled")
     private fun setupWebLayout() {
-        webView.setInitialScale(250)
+        webView.setInitialScale(150)
         webView.settings.builtInZoomControls = true
         webView.settings.displayZoomControls = false
         webView.settings.javaScriptEnabled = true

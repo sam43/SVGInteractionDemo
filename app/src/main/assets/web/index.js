@@ -1,8 +1,8 @@
 window.androidObj = function AndroidClass() {};
-var selectedlist = [];
+//var selectedlist = [];
 
 var svgBody = document.getElementById('div').innerHTML;
-var node = '.selected {fill: lightblue;}';
+var node = '.selected {fill: lightblue;}'; // custom style class has been injected into the SVG body inside HTML
 var nodex = '.default{fill:#e9e9e9;}';
 var svg = document.getElementsByTagName('svg')[0];
 
@@ -10,15 +10,9 @@ var inner = svg.getElementsByTagName('style')[0].innerHTML;
 var addingValue = nodex + inner + node;
 svg.getElementsByTagName('style')[0].innerHTML = addingValue;
 
-// 
 document.addEventListener("click", doSomething);
 
 var svgOutput = document.getElementById("div").outerHTML;
-
-//console.log("" + document.getElementsByTagName('svg')[0].id);
-
-//var tableId = document.getElementById(document.getElementsByTagName('svg')[0].id);
-//console.log("" + tableId.getElementsByClassName('st489')[0].id);
 
 var query = '*[id^=Code_]';
 var tablePathList = document.querySelectorAll(query);
@@ -31,7 +25,6 @@ for (table = 0; table < tablePathList.length; table++) {
 }
 
 function doSomething(e) {
-    //alert("Hello! I am an alert box!! with " + f);
     if (e.target !== e.currentTarget) {
         var clickedItem = e.target.id;
         var itemName;
@@ -41,7 +34,8 @@ function doSomething(e) {
             if (clickedItem === tablePathList[item].id) {
                 var clickedSvgPath = document.getElementById(clickedItem);
                 clickedSvgPath.classList.toggle("selected");
-                if (!selectedlist.includes(clickedItem)) {
+                itemName = e.target.querySelector('title').innerHTML;
+                /*if (!selectedlist.includes(clickedItem)) {
                     itemName = e.target.querySelector('title').innerHTML;
                     selectedlist.push(clickedItem);
                 } else {
@@ -49,10 +43,10 @@ function doSomething(e) {
                     if (index > -1) {
                         selectedlist.splice(index, 1);
                     }
-                }
+                }*/
             }
         }
-        console.log("Hello " + clickedItem);
+        //console.log("Hello " + clickedItem);
         window.androidObj.textToAndroid(itemName);
         document.getElementById('l_value').innerHTML = itemName;
     }

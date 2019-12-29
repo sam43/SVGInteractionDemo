@@ -53,7 +53,11 @@ object Repository {
             }
 
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                responseBodyLD.value = response.body()
+                try {
+                    responseBodyLD.value = response.body()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
             }
 
         }
